@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"> <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css"
+        ➥ href="https://cdn.jsdelivr.net/webjars/bootstrap/4.1.0/css/bootstrap.min.c ➥ ss" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+  <script src="https://cdn.jsdelivr.net/webjars/bootstrap/4.1.0/js/
+bootstrap.min.js"
+          ➥ th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+  <script src="https://cdn.jsdelivr.net/webjars/jquery/3.3.1/jquery.min.js" ➥ th:src="@{/webjars/jquery/jquery.min.js}"></script>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+  <a class="navbar-brand brand-text" href="#">
+    <img src="/images/logo.png" width="30" height="30" alt="logo"> Course Tracker
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  Source code
+  To begin using this technique, you can use the base version of the Spring Boot project used throughout it, which is available at https://mng.bz/laDj. The final version of this Spring Boot project is available at http://mng.bz/BxWv.
+  204
+  CHAPTER 5 Securing Spring Boot applications
+  <div class="collapse navbar-collapse justify-content-between" id="navbar-list">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#" th:href="@{/index}">Home</a> </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" th:href="@{/addcourse}">Add
+          Course</a>
+      </li>
+    </ul> </div>
+</nav>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h2 class="mb-1 text-center">Login</h2>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form th:action="@{/login}" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required autofocus>
+        </div>
+        <button type="submit" class="btn btn- ➥ dark">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+</body>
+</html>
